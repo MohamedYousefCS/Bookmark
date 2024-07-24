@@ -1,0 +1,15 @@
+@media (max-width: 435px) {
+  table thead th:not(:nth-child(2)) span:first-child {
+    margin-bottom: 14px;
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  table thead th span {
+    font-size: 14px !important;
+  }
+
+  #example_wrapper .row:first-child {
+    gap: 10px;
+  }
+}

@@ -1,0 +1,213 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap");
+
+::selection {
+  background-color: #fec260;
+  color: #352e28;
+}
+
+main {
+  background-color: #f7ecde;
+}
+
+body {
+  font-family: "PT Sans Caption", sans-serif;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  width: fit-content;
+  font-size: 50px;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.5rem;
+  width: 100%;
+  height: 20px;
+  background-color: #fec260;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+h1:hover::before {
+  height: calc(100% - 2.2rem);
+}
+
+h2 {
+  width: fit-content;
+  font-size: 25px;
+  font-family: "Righteous", sans-serif;
+  background-image: linear-gradient(to right, #3fa55c, #b4ac49);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bookmark {
+  border-block: 2px dotted #352e28;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #d99c39;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+.bookmark button.submit-btn {
+  width: fit-content;
+  background-color: #d1512d;
+  border-color: #d1512d;
+  color: #fff;
+}
+
+.bookmark button.submit-btn:hover {
+  background-color: #bb4120;
+  border-color: #a03315;
+  color: #fff;
+}
+
+#example_wrapper > div:first-child {
+  padding-top: 20px;
+}
+
+#example_wrapper > div:first-child > div:last-child label {
+  display: none;
+}
+
+#example_wrapper > div:first-child > div:last-child input {
+  width: 250px;
+  font-family: "Righteous", sans-serif;
+}
+
+table thead th#indexURL,
+table thead th#indexName {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+table thead th#indexURL:hover,
+table thead th#indexName:hover {
+  background-color: #ddd;
+}
+
+table thead th.active {
+  background-color: #ddd;
+}
+
+table tbody {
+  vertical-align: middle !important;
+}
+table tbody tr td {
+  text-align: center !important;
+}
+
+table tbody .icon {
+  max-width: 30px !important;
+}
+
+table button.visit {
+  background-color: #9eb23b;
+  color: #fff;
+  border-color: #9eb23b;
+}
+
+table tbody button.visit:hover {
+  background-color: #8a9e23;
+  color: #fff;
+  border-color: #6e8018;
+}
+
+table button.delete {
+  background-color: #eb1d36;
+  color: #fff;
+  border-color: #eb1d36;
+}
+
+table button.delete:hover {
+  background-color: #d30820;
+  color: #fff;
+  border-color: #ba081d;
+}
+
+table tbody tr button.edit {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  color: #fff;
+  transition: 0.4s;
+}
+
+table tbody tr button.edit:hover {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  color: #fff;
+}
+
+.data-info {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
+  visibility: hidden;
+  transition: 0.1s;
+}
+
+.data-info.active {
+  visibility: visible;
+}
+
+.data-info.active .content {
+  transform: scale(1);
+}
+
+.data-info .content {
+  width: 500px;
+  transform: scale(0);
+  transition: 0.4s;
+}
+
+.data-info .header .circles li {
+  width: 20px;
+  height: 20px;
+}
+
+.data-info .header .circles li:first-child {
+  background-color: #f15f5d;
+}
+
+.data-info .header .circles li:nth-child(2) {
+  background-color: #febe2e;
+}
+
+.data-info .header .circles li:last-child {
+  background-color: #4db748;
+}
+
+.data-info .body p {
+  font-family: "Bree Serif", serif;
+  font-size: 21px;
+  line-height: 27px;
+}
+
+.data-info .body ol li {
+  font-size: 18px;
+}
+
+.data-info .body ol li i {
+  color: #bb4120;
+}
+
+.count-site {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-family: "Bree Serif", serif;
+  padding-inline: 30px;
+  font-size: 18px;
+}
+
+.dt-length select {
+  font-family: "Pacifico", cursive;
+}
+
+.dt-length label {
+  font-family: "Bree Serif", serif;
+}

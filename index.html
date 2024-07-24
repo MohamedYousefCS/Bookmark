@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="./img/bookmark.png" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- Data Table CDN -->
+    <link
+      href="https://cdn.datatables.net/v/bs5/jq-3.7.0/jszip-3.10.1/dt-2.0.7/b-3.0.2/b-colvis-3.0.2/b-html5-3.0.2/b-print-3.0.2/fc-5.0.0/fh-4.0.1/r-3.0.2/rg-1.5.0/sc-2.4.2/datatables.min.css"
+      rel="stylesheet"
+    />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- Media CSS -->
+    <link rel="stylesheet" href="./css/media.css" />
+  </head>
+  <body>
+    <main class="min-vh-100 py-5">
+      <h1 class="mx-auto position-relative mb-5 py-2 z-3">Bookmarker</h1>
+
+      <div class="container">
+        <div class="bookmark py-4 px-3 mt-5">
+          <h2
+            class="d-flex align-items-center justify-content-center fw-medium gap-1 mx-auto text-center"
+          >
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+          <div class="site-name pt-4">
+            <label for="siteName" class="fs-6 fw-bold">
+              <i class="fa-solid fa-book-bookmark pe-2"></i>
+              Site Name</label
+            >
+            <input
+              type="text"
+              name="SiteName"
+              id="siteName"
+              class="form-control mt-2"
+              placeholder="Bookmark Name"
+              autocomplete="off"
+              spellcheck="false"
+            />
+          </div>
+          <div class="site-url pt-4">
+            <label for="siteURL" class="fs-6 fw-bold">
+              <i class="fa-solid fa-link pe-1"></i>
+              Site URL</label
+            >
+            <input
+              type="text"
+              name="SiteURL"
+              id="siteURL"
+              class="form-control mt-2"
+              placeholder="Website URL"
+              autocomplete="off"
+              spellcheck="false"
+            />
+          </div>
+          <div>
+            <button
+              id="submitBtn"
+              class="submit-btn btn mt-4 mx-auto px-5 d-block"
+            >
+              Submit
+            </button>
+            <button
+              id="updateBtn"
+              class="btn btn-success mt-4 mx-auto px-5 d-block d-none"
+            >
+              Update
+            </button>
+          </div>
+        </div>
+        <table id="example" class="table mt-4 table-striped text-center w-100">
+          <thead>
+            <tr>
+              <th class="text-capitalize text-center active" id="indexURL">
+                index
+              </th>
+              <th class="text-capitalize text-center" id="indexName">
+                Website Name
+              </th>
+              <th class="text-capitalize text-center">Visit</th>
+              <th class="text-capitalize text-center">Delete</th>
+              <th class="text-capitalize text-center">Update</th>
+            </tr>
+          </thead>
+          <tbody id="tableContent"></tbody>
+        </table>
+      </div>
+      <div
+        class="data-info position-fixed start-50 top-50 translate-middle w-100 h-100 z-3 d-flex align-items-center justify-content-center"
+        id="modal"
+      >
+        <div class="content bg-white shadow rounded p-4">
+          <div
+            class="header pb-4 d-flex align-items-center justify-content-between"
+          >
+            <ul
+              class="circles d-flex align-items-center column-gap-2 list-unstyled"
+            >
+              <li class="rounded-circle d-block"></li>
+              <li class="rounded-circle d-block"></li>
+              <li class="rounded-circle d-block"></li>
+            </ul>
+            <button class="btn border-0" id="closeModalBtn">
+              <i class="fa-solid fa-close fs-3"></i>
+            </button>
+          </div>
+          <div class="body">
+            <p>
+              Site Name or Url is not valid, Please follow the rules below :
+            </p>
+            <ol class="list-unstyled px-2">
+              <li class="pt-2 pb-3">
+                <i class="fa-regular fa-circle-right pe-1"></i>
+                Site name must contain at least 3 characters
+              </li>
+              <li>
+                <i class="fa-regular fa-circle-right pe-1"></i>
+                Site URL must be a valid one
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/v/bs5/jq-3.7.0/jszip-3.10.1/dt-2.0.7/b-3.0.2/b-colvis-3.0.2/b-html5-3.0.2/b-print-3.0.2/fc-5.0.0/fh-4.0.1/r-3.0.2/rg-1.5.0/sc-2.4.2/datatables.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
